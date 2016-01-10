@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="BandApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BandApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:BandApp.ViewModels"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance viewModels:HeartRateViewModel }">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <Style TargetType="TextBlock" BasedOn="{StaticResource HeaderTextBlockStyle}">
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="FontWeight" Value="Bold" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Viewbox Grid.Row="0">
+            <TextBlock Foreground="LightGray" Text="{Binding Path=State}"></TextBlock>
+        </Viewbox>
+        <Viewbox Grid.Row="1">
+            <TextBlock  Foreground="#008770">&#x2665;</TextBlock>
+        </Viewbox>
+        <Viewbox Grid.Row="2">
+            <TextBlock Text="{Binding Path=HeartRate}" FontSize="20"></TextBlock>
+        </Viewbox>
+  
+        <Viewbox Grid.Row="3">
+            <TextBlock Foreground="LightGray">Band2 Demo by Benjamin Abt</TextBlock>
+        </Viewbox>
+    </Grid>
+</Page>

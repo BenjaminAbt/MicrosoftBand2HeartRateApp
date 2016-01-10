@@ -1,0 +1,1 @@
+D:\_data\repositories\BandWebMonitor\src\BandApp\BandApp.csproj;arm
