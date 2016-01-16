@@ -7,4 +7,4 @@ Sample Application to show the interaction between Microsoft Band 2 (Microsoft B
 - Microsoft Band (1 or 2) or [FakeBand](https://github.com/BandOnTheRun/fake-band)
 
 # License
-MIT
+[MIT](https://github.com/BenjaminAbt/MicrosoftBand2HeartRateApp/blob/master/LICENSE)
